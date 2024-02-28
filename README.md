@@ -16,6 +16,10 @@ replace "D:\segmentation_img_data\extras\Bridge" with the desired path for mount
 
 include "--detach" to run in background and "--rm" to remove on exit
 
+### Using VSCode for edit as developer container:
+
+ Click on the "><" blue button at the corner (or call commands with ctrl+shift+P), select "(Dev Containers:) Attach to Running Container", select "Open Folder" and "Ponti IA", and have fun from outside of dependency hell!
+
 #### Monitoring GPU usage:
 
 execute gpustat:
