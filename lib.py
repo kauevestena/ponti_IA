@@ -1,5 +1,5 @@
 from lang_sam_importer import *
-import os, glob, shutil
+import os, glob, shutil, json
 from random import choice
 from tqdm import tqdm
 import logging
@@ -21,3 +21,7 @@ def get_all_images():
 def create_folderlist(folderlist):
     for folderpath in folderlist:
         create_folder(folderpath)
+
+def dump_json(json_obj, outpath):
+    with open(outpath, 'w', encoding='utf-8') as outfile:
+        json.dump(json_obj, outfile, indent=4, ensure_ascii=False)
