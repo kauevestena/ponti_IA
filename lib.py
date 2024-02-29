@@ -1,9 +1,7 @@
-from lang_sam_importer import *
+from constants import *
 import os, glob, shutil, json
 from random import choice
-from tqdm import tqdm
 import logging
-import cv2
 
 logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s', datefmt='%d-%b-%y %H:%M:%S',filemode='w',filename='global_log.log')
 
