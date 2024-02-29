@@ -2,15 +2,11 @@ from lib import *
 
 prompt = 'bridge'
 
-all_img_paths = get_all_images()
-
 model = LangSAM()
 
-bar = tqdm()
-
 with torch.no_grad():
-    while True:
-        img_path = choice(all_img_paths)
+    for img_path in tqdm(get_all_images()):
+
         filename = os.path.basename(img_path)
         base_filename = filename.replace(EXT,'')
 
@@ -50,8 +46,17 @@ with torch.no_grad():
 
             write_detection_img(original_image, sel_mask, (), (), outpath_clipped, clip=True)
 
+        # writing metadata:
+        metadata = {
+            'original_path': img_path,
+            'filename' : filename,
+            'prompt': prompt,
+            'original_size': original_size,
+        }
 
-        bar.update()
+        metadata_path = os.path.join(outfolderpath, 'metadata.json')
+        dump_json(metadata, metadata_path)
+
 
 
 
