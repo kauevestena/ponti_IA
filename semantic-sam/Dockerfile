@@ -4,6 +4,9 @@ RUN pip install torch==1.13.1 torchvision==0.14.1 --extra-index-url https://down
 RUN apt update
 RUN apt install -y git
 
+ENV HOME /workspace
+WORKDIR $HOME
+
 RUN pip install 'git+https://github.com/MaureenZOU/detectron2-xyz.git'
 RUN pip install git+https://github.com/cocodataset/panopticapi.git
 RUN git clone https://github.com/UX-Decoder/Semantic-SAM

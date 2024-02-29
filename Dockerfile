@@ -6,7 +6,6 @@ FROM pytorch/pytorch:latest
 ARG DEBIAN_FRONTEND=noninteractive
 
 ENV HOME /workspace
-
 WORKDIR $HOME
 
 # general system dependencies:
