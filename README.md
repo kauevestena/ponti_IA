@@ -1,4 +1,4 @@
-# ponti
+# Ponti IA
 
 A repo for experimenting on photos of bridges using AI.
 
