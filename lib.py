@@ -12,8 +12,8 @@ def create_folder(path):
 for folderpath in [ROOT_OUTFOLDERPATH]:
     create_folder(folderpath)
 
-def get_all_images():
-    return glob.glob(os.path.join(ROOTPATH,'**','*'+EXT),recursive=True)
+def get_all_images(rootpath=ROOTPATH_INPUT):
+    return glob.glob(os.path.join(rootpath,'**','*'+EXT),recursive=True)
 
 
 def create_folderlist(folderlist):

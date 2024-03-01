@@ -165,3 +165,6 @@ tests.py
 
 .vscode/
 tests.ipynb
+
+*.tmp
+*.pth

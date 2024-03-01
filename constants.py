@@ -2,6 +2,8 @@ DEVICE = 'cuda'
 
 ROOTPATH = '../data'
 
+ROOTPATH_INPUT = '../data/Bridge'
+
 ROOT_OUTFOLDERPATH = '../data/outputs'
 
 lang_sam_path = '../lang-segment-anything/lang_sam'

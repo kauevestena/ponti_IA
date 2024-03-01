@@ -29,7 +29,7 @@ def draw_image_v2(image, masks, boxes, labels, alpha=0.3,colors=['white'],draw_b
     return image.numpy().transpose(1, 2, 0)
 
 
-def write_detection_img(image_pil, masks, boxes, phrases, outpath,alpha=0.3,binary=False,clip=False):
+def write_detection_img(image_pil, masks, boxes, phrases, outpath=None,alpha=0.3,binary=False,clip=False):
     image_array = np.asarray(image_pil)
 
     colors = ['white']
@@ -45,4 +45,8 @@ def write_detection_img(image_pil, masks, boxes, phrases, outpath,alpha=0.3,bina
 
     image = draw_image_v2(image_array, masks, boxes, phrases,alpha=alpha,colors=colors)
     image = Image.fromarray(np.uint8(image)).convert("RGB")
-    image.save(outpath)
+
+    if outpath:
+        image.save(outpath)
+    
+    return image

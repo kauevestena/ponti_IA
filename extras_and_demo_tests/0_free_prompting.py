@@ -1,14 +1,14 @@
-from lib import *
+from extras_lib import *
 
 PROMPTS = [
     'bridge',
-    # 'structure',
-    # 'mold',
-    # 'defect',
-    # 'building',
-    # 'detail',
-    # 'concrete',
-    # 'beams',
+    'structure',
+    'mold',
+    'defect',
+    'building',
+    'detail',
+    'concrete',
+    'beams',
 ]
 
 all_img_paths = get_all_images()
