@@ -14,12 +14,8 @@ RUN apt install -y git
 RUN apt install libgl1-mesa-glx -y
 RUN apt install libglib2.0-0 -y
 
-# dependency: lang-segment-anything:
-RUN git clone https://github.com/luca-medeiros/lang-segment-anything.git
-WORKDIR $HOME/lang-segment-anything
-RUN pip install groundingdino-py
-RUN pip install segment-anything-py
-RUN python running_test.py
+# dependency: lavis:
+RUN git pip install salesforce-lavis
 
 # this repository stuff:
 WORKDIR $HOME
