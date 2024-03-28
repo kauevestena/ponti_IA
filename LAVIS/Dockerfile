@@ -15,7 +15,7 @@ RUN apt install libgl1-mesa-glx -y
 RUN apt install libglib2.0-0 -y
 
 # dependency: lavis:
-RUN git pip install salesforce-lavis
+RUN pip install salesforce-lavis
 
 # this repository stuff:
 WORKDIR $HOME
